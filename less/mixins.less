@@ -1,1 +1,17 @@
 // Mixins Here
+.display-none {
+	display: none;
+}
+.btn-colors(@color; @bg-color) {
+	color: @color;
+	background-color: @bg-color;
+}
+
+.btn-style (){
+	.btn-colors(@wild-sand; @btn-bg-color);
+	font-size: 1.6rem;
+	padding: 1rem 1.8rem;
+	width: 10rem;
+	border-radius: 5px;
+	cursor: pointer;
+}
