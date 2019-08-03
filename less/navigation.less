@@ -6,6 +6,8 @@ nav {
 	border-bottom: @nav-border 2px solid;
 	position: fixed;
 	opacity: .8;
+	padding-top: 1.6rem;
+
 
 	&:hover {
 		opacity: 1;
@@ -16,7 +18,6 @@ nav {
 		.logo {
 			font-size: 3rem;
 			text-align: center;
-			margin-top: 1.6rem;
 			margin-bottom: 2.8rem;
 		}
 	}
@@ -39,11 +40,29 @@ nav {
 	} // <-- ul
 } // <--nav
 
+@media @tablet {
+	nav {
+		position: relative;
+		opacity: 1;
+		height: 10rem;
+	}
+
+}
+
 @media @phone {
 	nav {
 		position: relative;
 		opacity: 1;
-		height: 8.4rem;
+		height: 10rem;
 
+		ul {
+			display: flex;
+			width: 100%;
+			max-width: 37.7rem;
+			margin: 0 auto;
+			justify-content: space-evenly;
+			margin-bottom: 1.5rem;
+			flex-wrap: wrap;
+		}
 	}
 }
