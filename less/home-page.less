@@ -3,6 +3,11 @@
 .home {
 
   .intro {
+    img {
+      border-radius: 5px;
+      width: 100%;
+      margin-top: 10rem;
+    }
 
     h2 {
       padding: 15px;
@@ -58,6 +63,11 @@
       }
 
       .btn {
+        .btn-style();
+
+        &:hover {
+          .btn-colors(@btn-bg-color, @wild-sand);
+        }
       }
     }
 
@@ -73,3 +83,85 @@
     }
   }
 }// home
+
+// ///////////////////////////////////////////////////////
+@media @tablet {
+  .home {
+
+    .intro {
+
+      img {
+        margin-top: 0;
+      }
+    }
+
+    .walk {
+      flex-flow: column-reverse;
+      padding: 2rem 2rem;
+      margin-top: 4rem;
+      max-width: 60rem;
+      margin: auto;
+
+      .walk-img {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 2.5rem;
+      }
+
+      .walk-text {
+        width: 100%;
+
+        .btn {
+          width: 100%;
+          text-align: center;
+          padding: 2.8rem 1.8rem;
+        }
+      }
+    } // <-- walk
+  }
+}
+
+@media @phone {
+  .home {
+
+    .intro {
+
+      img {
+        margin-top: 0;
+      }
+    }
+
+    .space-images {
+
+      .blast {
+        width: 100%;
+      }
+
+      .sky, .launch {
+        .display-none();
+      }
+    }
+
+    .walk {
+      flex-flow: column-reverse;
+      padding: 2rem 2rem;
+      margin-top: 4rem;
+
+      .walk-img {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 2.5rem;
+      }
+
+      .walk-text {
+        width: 100%;
+
+        .btn {
+          width: 100%;
+          text-align: center;
+          padding: 2.8rem 1.8rem;
+        }
+      }
+    } // <-- walk
+  } // <-- home
+}
